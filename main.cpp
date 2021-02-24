@@ -1,5 +1,9 @@
 #include <iostream>
 
+
+
+#define LENGTH = 10
+#define WIDTH = 5
 //函数定义
 int func();
 
