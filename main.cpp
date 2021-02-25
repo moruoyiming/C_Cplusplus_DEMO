@@ -6,14 +6,14 @@
 //#define LENGTH = 10;
 //#define WIDTH = 5 ;
 
-//ºêÑÓĞøÔËËã·û£¨\£©×Ö·û´®³£Á¿»¯ÔËËã·û£¨#£©
+//å®å»¶ç»­è¿ç®—ç¬¦ï¼ˆ\ï¼‰å­—ç¬¦ä¸²å¸¸é‡åŒ–è¿ç®—ç¬¦ï¼ˆ#ï¼‰
 #define message_for(a, b) \
 printf(#a " and " #b ":We love you! \n")
 
-//±ê¼ÇÕ³ÌùÔËËã·û£¨##£© printf ("token34 = %d", token34);
+//æ ‡è®°ç²˜è´´è¿ç®—ç¬¦ï¼ˆ##ï¼‰ printf ("token34 = %d", token34);
 #define tokenPaster(n) printf("token" #n " = %d \n", token##n)
 
-//defined() ÔËËã·û
+//defined() è¿ç®—ç¬¦
 #if !defined(MESSAGE)
 #define MESSAGE "You wish!"
 #endif
@@ -26,7 +26,7 @@ int square(int x) {
 
 #define MAX(x, y) ((x)>(y)?(x):(y))
 
-//ÓĞÌõ¼şÒıÓÃ
+//æœ‰æ¡ä»¶å¼•ç”¨
 #if SYSTEM1
 # include "2323"
 #elif SYSTEM2
@@ -34,7 +34,7 @@ int square(int x) {
 #endif
 
 
-//º¯Êı¶¨Òå
+//å‡½æ•°å®šä¹‰
 int func();
 
 void printBook(struct Books book);
@@ -49,10 +49,10 @@ struct Books {
 };
 /**
  *
- *    C ¹²ÓÃÌå
- *    ¹²ÓÃÌåÊÇÒ»ÖÖÌØÊâµÄÊı¾İÀàĞÍ£¬ÔÊĞíÄúÔÚÏàÍ¬µÄÄÚ´æÎ»ÖÃ´æ´¢²»Í¬µÄÊı¾İÀàĞÍ¡£Äú¿ÉÒÔ¶¨ÒåÒ»¸ö´øÓĞ¶à³ÉÔ±µÄ¹²ÓÃÌå£¬µ«ÊÇÈÎºÎÊ±ºòÖ»ÄÜÓĞÒ»¸ö³ÉÔ±´øÓĞÖµ¡£¹²ÓÃÌåÌá¹©ÁËÒ»ÖÖÊ¹ÓÃÏàÍ¬µÄÄÚ´æÎ»ÖÃµÄÓĞĞ§·½Ê½¡£
- *    ¶¨Òå¹²ÓÃÌå
- *    ÎªÁË¶¨Òå¹²ÓÃÌå£¬Äú±ØĞëÊ¹ÓÃ union Óï¾ä£¬·½Ê½Óë¶¨Òå½á¹¹ÀàËÆ¡£union Óï¾ä¶¨ÒåÁËÒ»¸öĞÂµÄÊı¾İÀàĞÍ£¬´øÓĞ¶à¸ö³ÉÔ±¡£union Óï¾äµÄ¸ñÊ½ÈçÏÂ£º
+ *    C å…±ç”¨ä½“
+ *    å…±ç”¨ä½“æ˜¯ä¸€ç§ç‰¹æ®Šçš„æ•°æ®ç±»å‹ï¼Œå…è®¸æ‚¨åœ¨ç›¸åŒçš„å†…å­˜ä½ç½®å­˜å‚¨ä¸åŒçš„æ•°æ®ç±»å‹ã€‚æ‚¨å¯ä»¥å®šä¹‰ä¸€ä¸ªå¸¦æœ‰å¤šæˆå‘˜çš„å…±ç”¨ä½“ï¼Œä½†æ˜¯ä»»ä½•æ—¶å€™åªèƒ½æœ‰ä¸€ä¸ªæˆå‘˜å¸¦æœ‰å€¼ã€‚å…±ç”¨ä½“æä¾›äº†ä¸€ç§ä½¿ç”¨ç›¸åŒçš„å†…å­˜ä½ç½®çš„æœ‰æ•ˆæ–¹å¼ã€‚
+ *    å®šä¹‰å…±ç”¨ä½“
+ *    ä¸ºäº†å®šä¹‰å…±ç”¨ä½“ï¼Œæ‚¨å¿…é¡»ä½¿ç”¨ union è¯­å¥ï¼Œæ–¹å¼ä¸å®šä¹‰ç»“æ„ç±»ä¼¼ã€‚union è¯­å¥å®šä¹‰äº†ä¸€ä¸ªæ–°çš„æ•°æ®ç±»å‹ï¼Œå¸¦æœ‰å¤šä¸ªæˆå‘˜ã€‚union è¯­å¥çš„æ ¼å¼å¦‚ä¸‹ï¼š
  *
  */
 union Data {
@@ -70,7 +70,7 @@ struct {
     unsigned int heightValidated;
 } status1;
 
-/* ¶¨ÒåÎ»Óò½á¹¹ */
+/* å®šä¹‰ä½åŸŸç»“æ„ */
 struct {
     unsigned int widthValidated: 1;
     unsigned int heightValidated: 1;
@@ -81,11 +81,11 @@ struct {
 
 
 void recursion() {
-    printf(" C µİ¹éµ÷ÓÃ £¡");
+    printf(" C é€’å½’è°ƒç”¨ ï¼");
     recursion();
 }
 
-//¿É±ä²ÎÊı
+//å¯å˜å‚æ•°
 int funXX(int ...) {
 
 }
@@ -95,18 +95,18 @@ int average(int nums, ...) {
     double sum = 0.0;
     int i;
 
-    /* Îª num ¸ö²ÎÊı³õÊ¼»¯ valist */
+    /* ä¸º num ä¸ªå‚æ•°åˆå§‹åŒ– valist */
     va_start(valist, nums);
 
-    /* ·ÃÎÊËùÓĞ¸³¸ø valist µÄ²ÎÊı */
+    /* è®¿é—®æ‰€æœ‰èµ‹ç»™ valist çš„å‚æ•° */
     for (i = 0; i < nums; i++) {
         sum += va_arg(valist, int);
-    }     /* ÇåÀíÎª valist ±£ÁôµÄÄÚ´æ */
+    }     /* æ¸…ç†ä¸º valist ä¿ç•™çš„å†…å­˜ */
     va_end(valist);
     return sum / nums;
 }
 
-int main2222() {
+int main() {
     std::cout << "Hello, World!" << std::endl;
     int i = 200;
     double j = 3000;
@@ -117,54 +117,58 @@ int main2222() {
     printf("what is %d \n", m);
     printf("what is %c \n", a);
     int k = 3000;
+    //å®šä¹‰intæŒ‡é’ˆå˜é‡  ->  æŒ‡å‘å†…å­˜åœ°å€
+    //&k è·å–å˜é‡å†…å­˜åœ°å€
     int *l = &k;
-    printf("what is %d , %d \n", k, &k);
+    printf(" k value is %d , address is %x \n", k, &k);
+    printf(" *l value is %d   l value is %x \n",*l,l);
+    //ä¿®æ”¹æŒ‡é’ˆæ‰€æŒ‡å‘çš„å†…å­˜åœ°å€å€¼
     *l = 4000;
-    printf("what is %d , %d \n", k, &k);
+    printf(" k value is %d , address is %x \n", k, &k);
     printf(" int sizeof is %d \n", sizeof(int));
     printf(" double sizeof is %d \n", sizeof(double));
 
     int size = func();
     printf("size is %d \n", size);
 
-
+    //å®šä¹‰å¸¸é‡
     const int LENGTH = 10;
     const int WIDTH = 5;
     int area = LENGTH * WIDTH;
     printf("area is %d \n", area);
 
+    //å®šä¹‰æ•°ç»„
     double arrayName[] = {1000.0, 2.0, 3.0, 7.0, 50.0};
     for (int i = 0; i < 5; i++) {
         printf(" array i = %d ,arrayName[i]= %lf \n", i, arrayName[i]);
     }
 
+    char var2[10];/* æŒ‡é’ˆå˜é‡çš„å£°æ˜ */
+    printf("var2 å˜é‡çš„åœ°å€ï¼š %x\n", &var2);
 
-    char var2[10];/* Ö¸Õë±äÁ¿µÄÉùÃ÷ */
-    printf("var2 ±äÁ¿µÄµØÖ·£º %x\n", &var2);
-
-    int var1 = 20; /* Êµ¼Ê±äÁ¿µÄÉùÃ÷ */
-    int *ip = &var1; /* ÔÚÖ¸Õë±äÁ¿ÖĞ´æ´¢ var µÄµØÖ· */
+    int var1 = 20; /* å®é™…å˜é‡çš„å£°æ˜ */
+    int *ip = &var1; /* åœ¨æŒ‡é’ˆå˜é‡ä¸­å­˜å‚¨ var çš„åœ°å€ */
 
     printf("Address of var variable: %x\n", &var1);
-    /* ÔÚÖ¸Õë±äÁ¿ÖĞ´æ´¢µÄµØÖ· */
+    /* åœ¨æŒ‡é’ˆå˜é‡ä¸­å­˜å‚¨çš„åœ°å€ */
     printf("Address of var variable: %x\n", ip);
-    /* Ê¹ÓÃÖ¸Õë·ÃÎÊÖµ */
+    /* ä½¿ç”¨æŒ‡é’ˆè®¿é—®å€¼ */
     printf("Value of *ip variable: %d\n", *ip);
 
     int *ptr = NULL;
-    printf("ptr µÄÖµÊÇ%x\n", ptr);
+    printf("ptr çš„å€¼æ˜¯ %x\n", ptr);
 
     char greeting[5] = {'H', 'e', 'l', 'l', 'o'};
     char greeting2[] = "Hello";
     printf("Greeting message: %s\n", greeting);
 
-    //C ½á¹¹Ìå
+    //C ç»“æ„ä½“
     struct Books book1;
     strcpy(book1.title, "C Programming");
     strcpy(book1.author, "JIANRUILin");
     strcpy(book1.subject, "C Programming Tutorial");
     book1.book_id = 123456;
-    /* Êä³ö Book1 ĞÅÏ¢ */
+    /* è¾“å‡º Book1 ä¿¡æ¯ */
     printf("Book 1 title : %s\n", book1.title);
     printf("Book 1 author : %s\n", book1.author);
     printf("Book 1 subject : %s\n", book1.subject);
@@ -176,12 +180,12 @@ int main2222() {
     bookArea = &book1;
     printf(" bookArea title %s \n", bookArea->title);
 
-    /* Í¨¹ı´« Book1 µÄµØÖ·À´Êä³ö Book1 ĞÅÏ¢ */
-    printBook2(&book1);
+    /* é€šè¿‡ä¼  Book1 çš„åœ°å€æ¥è¾“å‡º Book1 ä¿¡æ¯ */
+    printBook2(bookArea);
 
-    //C ¹²ÓÃÌå
+    //C å…±ç”¨ä½“
     union Data data;
-    printf("Memory size occupied by data : %d\n", sizeof(data));
+    printf("Memory size occupied by data : %lu\n", sizeof(data));
 
     data.i = 10;
     printf("data.i : %d\n", data.i);
@@ -190,9 +194,9 @@ int main2222() {
     strcpy(data.str, "C Programming");
     printf("data.str : %s\n", data.str);
 
-    //C Î»Óò
+    //C ä½åŸŸ
     Age.age = 4;
-    printf("Sizeof( Age ) : %d\n", sizeof(Age));
+    printf("Sizeof( Age ) : %lu\n", sizeof(Age));
     printf("Age.age : %d\n", Age.age);
 
     Age.age = 7;
@@ -201,13 +205,13 @@ int main2222() {
     Age.age = 8;
     printf("Age.age : %d\n", Age.age);
 
-    printf("Memory size occupied by status1 : %d\n", sizeof(status1));
-    printf("Memory size occupied by status2 : %d\n", sizeof(status2));
+    printf("Memory size occupied by status1 : %lu\n", sizeof(status1));
+    printf("Memory size occupied by status2 : %lu\n", sizeof(status2));
 
     printf("Value of TRUE : %d\n", TRUE);
     printf("Value of FALSE : %d\n", FALSE);
 
-    //C Ô¤´¦ÀíÆ÷
+    //C é¢„å¤„ç†å™¨
     message_for("Carole", "Debra");
 
     int token34 = 40;
@@ -217,13 +221,13 @@ int main2222() {
 
     printf("Max between 20 and 10 is %d\n", MAX(10, 20));
 
-    //C Êı¾İÀàĞÍ×ª»»
+    //C æ•°æ®ç±»å‹è½¬æ¢
     int sum = 17, count = 5;
     double mean;
     mean = (double) sum * count;
     printf("Value of mean : %f\n", mean);
 
-    //C ´íÎó´¦Àí
+    //C é”™è¯¯å¤„ç†
     FILE *pf;
     int errnum;
     pf = fopen("unexist.txt", "rb");
@@ -236,41 +240,41 @@ int main2222() {
         fclose(pf);
     }
 
-    //C ÍË³ö
+    //C é€€å‡º
 //    exit(EXIT_FAILURE)
 
-    //C µİ¹é
+    //C é€’å½’
 //    recursion();
 
-    //C ¿É±ä²ÎÊı
+    //C å¯å˜å‚æ•°
     funXX(1, 2, 3);
     funXX(1, 3, 2, 2);
-    printf("Average of 2, 3, 4, 5 = %f\n", average(4, 2, 3, 4, 5));
-    printf("Average of 5, 10, 15 = %f\n", average(3, 5, 10, 15));
+    printf("Average of 2, 3, 4, 5 = %d\n", average(4, 2, 3, 4, 5));
+    printf("Average of 5, 10, 15 = %d\n", average(3, 5, 10, 15));
 
-    //C ÄÚ´æ¹ÜÀí
-    //¶¯Ì¬·ÖÅäÄÚ´æ
+    //C å†…å­˜ç®¡ç†
+    //åŠ¨æ€åˆ†é…å†…å­˜
 //    void *calloc(int num, int size);
-//    ¸Ãº¯Êı·ÖÅäÒ»¸ö´øÓĞ function allocates an array of num ¸öÔªËØµÄÊı×é£¬Ã¿¸öÔªËØµÄ´óĞ¡Îª size ×Ö½Ú¡£
+//    è¯¥å‡½æ•°åˆ†é…ä¸€ä¸ªå¸¦æœ‰ function allocates an array of num ä¸ªå…ƒç´ çš„æ•°ç»„ï¼Œæ¯ä¸ªå…ƒç´ çš„å¤§å°ä¸º size å­—èŠ‚ã€‚
 //    void free(void *address);
-//    ¸Ãº¯ÊıÊÍ·Å address ËùÖ¸ÏòµÄhÄÚ´æ¿é¡£
+//    è¯¥å‡½æ•°é‡Šæ”¾ address æ‰€æŒ‡å‘çš„hå†…å­˜å—ã€‚
 //    void *malloc(int num);
-//    ¸Ãº¯Êı·ÖÅäÒ»¸ö num ×Ö½ÚµÄÊı×é£¬²¢°ÑËüÃÇ½øĞĞ³õÊ¼»¯¡£
+//    è¯¥å‡½æ•°åˆ†é…ä¸€ä¸ª num å­—èŠ‚çš„æ•°ç»„ï¼Œå¹¶æŠŠå®ƒä»¬è¿›è¡Œåˆå§‹åŒ–ã€‚
 //    void *realloc(void *address, int newsize);
-//    ¸Ãº¯ÊıÖØĞÂ·ÖÅäÄÚ´æ£¬°ÑÄÚ´æÀ©Õ¹µ½ newsize¡£
-//    char name[100];
-//    char *description;
-//    strcpy(name, "Zara Ali");
-//
-//    /* ¶¯Ì¬·ÖÅäÄÚ´æ */
-//    description = malloc(200 * sizeof(char));
-//    if (description == NULL) {
-//        fprintf(stderr, "Error - unable to allocate required memory \n");
-//    } else {
-//        strcpy(description, "Zara ali a DPS student in class 10th");
-//    }
-//    printf("Name = %d \n", name);
-//    printf("Description:%s\n", description);
+//    è¯¥å‡½æ•°é‡æ–°åˆ†é…å†…å­˜ï¼ŒæŠŠå†…å­˜æ‰©å±•åˆ° newsizeã€‚
+    char name[100];
+    char *description;
+    strcpy(name, "Zara Ali");
+
+    /* åŠ¨æ€åˆ†é…å†…å­˜ */
+    description = static_cast<char *>(malloc(200 * sizeof(char)));
+    if (description == NULL) {
+        fprintf(stderr, "Error - unable to allocate required memory \n");
+    } else {
+        strcpy(description, "Zara ali a DPS student in class 10th");
+    }
+    printf("Name = %d \n", name);
+    printf("Description:%s\n", description);
 
 
     return 0;

@@ -4,7 +4,7 @@
 #include "ctype.h"
 #include "stdio.h"
 
-int main() {
+int mainss() {
 
 
     int var1 = 'd';
