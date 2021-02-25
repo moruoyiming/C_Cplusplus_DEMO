@@ -3,7 +3,7 @@
 //
 #include <stdio.h>
 
-int main() {
+int main222() {
 
     FILE *fp;
     fp = fopen("D:\\project_c\\ndk_demo\\test.txt", "w+");

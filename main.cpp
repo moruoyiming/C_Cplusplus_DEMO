@@ -1,9 +1,38 @@
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 //#define LENGTH = 10;
 //#define WIDTH = 5 ;
+
+//宏延续运算符（\）字符串常量化运算符（#）
+#define message_for(a, b) \
+printf(#a " and " #b ":We love you! \n")
+
+//标记粘贴运算符（##） printf ("token34 = %d", token34);
+#define tokenPaster(n) printf("token" #n " = %d \n", token##n)
+
+//defined() 运算符
+#if !defined(MESSAGE)
+#define MESSAGE "You wish!"
+#endif
+
+int square(int x) {
+    return x * x;
+}
+
+#define square(x) ((x)*(x))
+
+#define MAX(x, y) ((x)>(y)?(x):(y))
+
+//有条件引用
+#if SYSTEM1
+# include "2323"
+#elif SYSTEM2
+# include "121"
+#endif
+
 
 //函数定义
 int func();
@@ -36,23 +65,48 @@ struct {
     unsigned int age: 3;
 } Age;
 
-struct
-{
+struct {
     unsigned int widthValidated;
     unsigned int heightValidated;
 } status1;
 
 /* 定义位域结构 */
-struct
-{
-    unsigned int widthValidated : 1;
-    unsigned int heightValidated : 1;
+struct {
+    unsigned int widthValidated: 1;
+    unsigned int heightValidated: 1;
 } status2;
 
 #define TRUE  1
 #define FALSE 0
 
-int main2() {
+
+void recursion() {
+    printf(" C 递归调用 ！");
+    recursion();
+}
+
+//可变参数
+int funXX(int ...) {
+
+}
+
+int average(int nums, ...) {
+    va_list valist;
+    double sum = 0.0;
+    int i;
+
+    /* 为 num 个参数初始化 valist */
+    va_start(valist, nums);
+
+    /* 访问所有赋给 valist 的参数 */
+    for (i = 0; i < nums; i++) {
+        sum += va_arg(valist, int);
+    }     /* 清理为 valist 保留的内存 */
+    va_end(valist);
+    return sum / nums;
+}
+
+int main2222() {
     std::cout << "Hello, World!" << std::endl;
     int i = 200;
     double j = 3000;
@@ -104,6 +158,7 @@ int main2() {
     char greeting2[] = "Hello";
     printf("Greeting message: %s\n", greeting);
 
+    //C 结构体
     struct Books book1;
     strcpy(book1.title, "C Programming");
     strcpy(book1.author, "JIANRUILin");
@@ -124,6 +179,7 @@ int main2() {
     /* 通过传 Book1 的地址来输出 Book1 信息 */
     printBook2(&book1);
 
+    //C 共用体
     union Data data;
     printf("Memory size occupied by data : %d\n", sizeof(data));
 
@@ -134,22 +190,88 @@ int main2() {
     strcpy(data.str, "C Programming");
     printf("data.str : %s\n", data.str);
 
-
+    //C 位域
     Age.age = 4;
-    printf( "Sizeof( Age ) : %d\n", sizeof(Age) );
-    printf( "Age.age : %d\n", Age.age );
+    printf("Sizeof( Age ) : %d\n", sizeof(Age));
+    printf("Age.age : %d\n", Age.age);
 
     Age.age = 7;
-    printf( "Age.age : %d\n", Age.age );
+    printf("Age.age : %d\n", Age.age);
 
     Age.age = 8;
-    printf( "Age.age : %d\n", Age.age );
+    printf("Age.age : %d\n", Age.age);
 
-    printf( "Memory size occupied by status1 : %d\n", sizeof(status1));
-    printf( "Memory size occupied by status2 : %d\n", sizeof(status2));
+    printf("Memory size occupied by status1 : %d\n", sizeof(status1));
+    printf("Memory size occupied by status2 : %d\n", sizeof(status2));
 
-    printf( "Value of TRUE : %d\n", TRUE);
-    printf( "Value of FALSE : %d\n", FALSE);
+    printf("Value of TRUE : %d\n", TRUE);
+    printf("Value of FALSE : %d\n", FALSE);
+
+    //C 预处理器
+    message_for("Carole", "Debra");
+
+    int token34 = 40;
+    tokenPaster(34);
+
+    printf("Here is the message: %s\n", MESSAGE);
+
+    printf("Max between 20 and 10 is %d\n", MAX(10, 20));
+
+    //C 数据类型转换
+    int sum = 17, count = 5;
+    double mean;
+    mean = (double) sum * count;
+    printf("Value of mean : %f\n", mean);
+
+    //C 错误处理
+    FILE *pf;
+    int errnum;
+    pf = fopen("unexist.txt", "rb");
+    if (pf == NULL) {
+        errnum = errno;
+        fprintf(stderr, "Value of errno: %d\n", errno);
+        perror("Error printed by perror");
+        fprintf(stderr, "Error opening file %s\n", strerror(errnum));
+    } else {
+        fclose(pf);
+    }
+
+    //C 退出
+//    exit(EXIT_FAILURE)
+
+    //C 递归
+//    recursion();
+
+    //C 可变参数
+    funXX(1, 2, 3);
+    funXX(1, 3, 2, 2);
+    printf("Average of 2, 3, 4, 5 = %f\n", average(4, 2, 3, 4, 5));
+    printf("Average of 5, 10, 15 = %f\n", average(3, 5, 10, 15));
+
+    //C 内存管理
+    //动态分配内存
+//    void *calloc(int num, int size);
+//    该函数分配一个带有 function allocates an array of num 个元素的数组，每个元素的大小为 size 字节。
+//    void free(void *address);
+//    该函数释放 address 所指向的h内存块。
+//    void *malloc(int num);
+//    该函数分配一个 num 字节的数组，并把它们进行初始化。
+//    void *realloc(void *address, int newsize);
+//    该函数重新分配内存，把内存扩展到 newsize。
+//    char name[100];
+//    char *description;
+//    strcpy(name, "Zara Ali");
+//
+//    /* 动态分配内存 */
+//    description = malloc(200 * sizeof(char));
+//    if (description == NULL) {
+//        fprintf(stderr, "Error - unable to allocate required memory \n");
+//    } else {
+//        strcpy(description, "Zara ali a DPS student in class 10th");
+//    }
+//    printf("Name = %d \n", name);
+//    printf("Description:%s\n", description);
+
 
     return 0;
 }
@@ -174,6 +296,5 @@ int func() {
     int b;
     a = 100;
     b = 234;
-
     return a + b;
 }
