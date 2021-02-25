@@ -96,17 +96,17 @@ int average(int nums, ...) {
     int i;
 
     /* 为 num 个参数初始化 valist */
-    va_start(valist, nums);
+//    va_start(valist, nums);
 
     /* 访问所有赋给 valist 的参数 */
     for (i = 0; i < nums; i++) {
-        sum += va_arg(valist, int);
+//        sum += va_arg(valist, int);
     }     /* 清理为 valist 保留的内存 */
-    va_end(valist);
+//    va_end(valist);
     return sum / nums;
 }
 
-int main() {
+int main2() {
     std::cout << "Hello, World!" << std::endl;
     int i = 200;
     double j = 3000;
