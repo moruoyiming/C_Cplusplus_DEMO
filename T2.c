@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-//º¯ÊıÖ¸Õë
+//å‡½æ•°æŒ‡é’ˆ
 void add(int a, int b) {
     printf("method add %d \n", a + b);
 }
@@ -14,10 +14,10 @@ void oprate(void(*method)(int, int), int num, int num2) {
 }
 
 
-//* È¡³öÄÚ´æµØÖ·µÄÖµ
+//* å–å‡ºå†…å­˜åœ°å€çš„å€¼
 int main() {
 
-    //¶à¼¶Ö¸Õë
+    //å¤šçº§æŒ‡é’ˆ
     int num = 100;
     int *num_p = &num;
     printf("num value is %d ,&num is %p ,num_p is %p ,*num_p is %d \n", num, &num, num_p, *num_p);
@@ -31,11 +31,11 @@ int main() {
            num_p,
            *num_p, num_p_p, **num_p_p, num_p_p_p, ***num_p_p_p);
 
-    printf("***num_p_p_p is %d µØÖ·ÊÇ%p,*num_p_p is %d  µØÖ·ÊÇ%p ,*num_p is %d µØÖ·ÊÇ%p \n", ***num_p_p_p, &(***num_p_p_p),
+    printf("***num_p_p_p is %d åœ°å€æ˜¯%p,*num_p_p is %d  åœ°å€æ˜¯%p ,*num_p is %d åœ°å€æ˜¯%p \n", ***num_p_p_p, &(***num_p_p_p),
            **num_p_p, &(**num_p_p), *num_p, &(*num_p));
 
 
-    //Êı×éÖ¸Õë
+    //æ•°ç»„æŒ‡é’ˆ
     int array[] = {15, 20, 123, 135};
     int *array_p = &array;
     printf(" array ad is %p \n", array);
@@ -52,7 +52,7 @@ int main() {
     }
     printf("int sizeof is %d ,array sizeof is %d \n",sizeof(int),sizeof(array));
 
-    //º¯ÊıÖ¸Õë
+    //å‡½æ•°æŒ‡é’ˆ
     oprate(add,20,10);
     oprate(sub,200,31);
     printf("add is %p \n",add);
