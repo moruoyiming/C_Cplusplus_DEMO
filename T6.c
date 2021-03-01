@@ -19,7 +19,7 @@ void dynamicAction() {
  */
 int main(void) {
     while (9) {
-        sleep(10);
+        sleep(4);
         dynamicAction();
     }
     return 0;
