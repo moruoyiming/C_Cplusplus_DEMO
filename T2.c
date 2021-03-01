@@ -14,8 +14,12 @@ void oprate(void(*method)(int, int), int num, int num2) {
 }
 
 
-//* 取出内存地址的值
-int main() {
+/**
+ * 函数指针
+ * //* 取出内存地址的值
+ * @return
+ */
+int main2() {
 
     //多级指针
     int num = 100;
