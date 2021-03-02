@@ -6,7 +6,7 @@
  * 静态开辟内存 申请的是栈区，动态开辟内存 申请的是堆区
  * @return
  */
-int main(void) {
+int main8(void) {
     int num;
     printf("请输入数的个数：\n");
     scanf("%d", &num);
