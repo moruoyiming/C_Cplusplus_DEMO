@@ -17,7 +17,7 @@ void dynamicAction() {
  * 在栈区声明内存地址
  * @return
  */
-int main(void) {
+int main6(void) {
     while (9) {
         sleep(4);
         dynamicAction();
