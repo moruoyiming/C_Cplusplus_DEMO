@@ -34,9 +34,13 @@ int main8(void) {
         }
     }
     if (new_arr) {
-        free(new_arr);
+        free(new_arr);//只是释放了空间
         //不置NULL 就是悬空指针
-        new_arr = NULL;
+        new_arr = NULL;//指针还是有指向空间地址的。
+        arr = NULL; //arr 还在指向空间地址的，为了不出现悬空指针，指向NULL的空间
+    }else{//重新开辟的对空间是失败的
+        free(arr);
+        arr = NULL;//消除指向， 悬空指针。
     }
 
     return 0;

@@ -6,7 +6,7 @@
  * ×Ö·û´®²éÕÒ Æ´½Ó °üº¬
  * @return
  */
-int main() {
+int main12() {
     char *text = "Hello World";
     char *subtext = "W";
     char *temp = strstr(text, subtext);

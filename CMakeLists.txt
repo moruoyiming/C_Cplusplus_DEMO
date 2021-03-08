@@ -3,4 +3,4 @@ project(ndk_demo)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(ndk_demo File.c ctype.c T1.cpp T2.c T3.c T4.c T5.c T6.c T7.c T8.c T9.c T10.c T11.c 12.c)
+add_executable(ndk_demo File.c ctype.c T1.cpp T2.c T3.c T4.c T5.c T6.c T7.c T8.c T9.c T10.c T11.c T12.c T13.c T14.c T15.c T16.c T17.c)

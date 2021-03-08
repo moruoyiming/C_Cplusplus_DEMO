@@ -41,7 +41,7 @@ void printBook(struct Books book);
 
 void printBook2(struct Books *book);
 
-struct Books {
+struct  Books {
     char title[50];
     char author[50];
     char subject[100];
