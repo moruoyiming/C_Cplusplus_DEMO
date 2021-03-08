@@ -7,7 +7,7 @@ struct Cat2 {
     int age;
 };
 
-int main() {
+int main17() {
     struct Cat2 *cat2 = malloc(sizeof(struct Cat2));
     strcpy(cat2->name, "金色猫");
     cat2->age = 10;
