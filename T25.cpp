@@ -56,7 +56,7 @@ void insertStudent(Student student) { //常量引用  const Student & student
 //    strcpy(student.name,"慕容复");
 //}
 
-int main() {
+int main25() {
     printf("降龙十八掌\n");
     //操作符重载
     cout << "擒龙功" << endl;
