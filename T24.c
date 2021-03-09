@@ -4,7 +4,7 @@
  * 读取文件的大小
  * @return
  */
-int main() {
+int main24() {
     char *filename = "/Users/jian/Documents/development/test.txt";
     FILE *file = fopen(filename, "rb");
     if (!file) {
