@@ -13,13 +13,13 @@ int main() {
     char *filenamesrc = "/Users/jian/Documents/development/test.txt";
     char *filenamedes = "/Users/jian/Documents/development/test2.txt";
     FILE *fp = fopen(filenamesrc, "rb");
-    FILE *fp2 = fopen(filenamedes, "rw");
+    FILE *fp2 = fopen(filenamedes, "wb");
     if (!fp || !fp2) {
         printf("The file <%s> can not be opened.\n", fp);//打开操作不成功
     }
     int buffer[514];
     int length;
-    while ((length = fread(buffer, sizeof(int), sizeof(buffer) / sizeof(int), fp)) != 0) {
+    while ((length = fread(buffer, sizeof(int), 514, fp)) != 0) {
         fwrite(buffer, sizeof(int), length, fp2);
     }
     //关闭文件
