@@ -63,5 +63,12 @@ int main13() {
         free(result);
         result = NULL;
     }
+
+//    char * result1="ABCDEFG"; 会报错 因为不允许修改常量值
+//    char * result1=NULL;会报错 因为不允许修改NULL值
+//    substrAction3(result, str, 2, 5);
+//    printf("main 截取的内容是：%s \n", result);
+
+
     return 0;
 }

@@ -6,7 +6,7 @@
  * 文件的加解密
  * @return
  */
-int main() {
+int main27() {
     char *filename = "/Users/jian/Documents/development/test.txt";
     char *filenameEncode = "/Users/jian/Documents/development/testEncode.txt";
 
