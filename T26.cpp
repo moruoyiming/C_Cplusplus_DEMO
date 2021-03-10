@@ -4,7 +4,7 @@
  *  对象创建
  * @return
  */
-int main() {
+int main26() {
     //规范写法  头文件.h  .hpp    实现文件.cpp
     std::cout << 1 << std::endl;
 
