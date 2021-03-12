@@ -3,7 +3,7 @@
 #include <string.h>
 
 
-int main() {
+int main30() {
     char *filename = "/Users/jian/Documents/development/test3.txt";
     char *filenameEncode = "/Users/jian/Documents/development/test4.txt";
 

@@ -9,11 +9,17 @@ private:
     int age;
 
 public:
+
+    //无参构造函数
+    Student();
+
+    Student(char * name);
+
     void setAge(int age);
 
     void setName(char *name);
 
-    char * getName();
+    char *getName();
 
     int getAge();
 };
