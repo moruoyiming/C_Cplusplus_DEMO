@@ -1,17 +1,17 @@
 #include "Student.h"
 
-//å®ç°æ–¹æ³•
+//ÊµÏÖ·½·¨
 void Student::setAge(int age) {
     this->age = age;
 }
 
 void Student::setName(char *name) {
-    //C++ å¯¹è±¡æŒ‡å‘å¾—æ˜¯ä¸€ä¸ªæŒ‡é’ˆ
-    //è°ƒç”¨ä¸€çº§æŒ‡é’ˆå¾—æˆå‘˜
+    //C++ ¶ÔÏóÖ¸ÏòµÃÊÇÒ»¸öÖ¸Õë
+    //µ÷ÓÃÒ»¼¶Ö¸ÕëµÃ³ÉÔ±
     this->name = name;
 }
 
-char* Student::getName() {
+char *Student::getName() {
     return name;
 }
 
@@ -19,12 +19,33 @@ int Student::getAge() {
     return age;
 }
 
-//æ— å‚æ„é€ å‡½æ•°
-Student::Student(){
-    cout << "æ— å‚æ•°æ„é€ å‡½æ•°" << endl;
+
+//ÎŞ²Î¹¹Ôìº¯Êı
+Student::Student() {
+    cout << "ÎŞ²ÎÊı¹¹Ôìº¯Êı" << endl;
 }
 
-Student::Student(char * name) {
-    cout << "ä¸€ä¸ªå‚æ•°æ„é€ å‡½æ•°" << endl;
+Student::Student(char *name) {
+    cout << "Ò»¸ö²ÎÊı¹¹Ôìº¯Êı" << endl;
     this->name = name;
+}
+
+Student::Student(char *name, int age) {
+    cout << "¶ş¸ö²ÎÊı¹¹Ôìº¯Êı" << endl;
+    this->name = name;
+}
+
+//Îö¹¹º¯Êı Student¶ÔÏóµÃÁÙÖÕÒÅÑÔ  Student¶ÔÏó»ØÊÕ£¬×öÊÍ·Å²Ù×÷£» JAVA finalize   KT ĞèÒªÁíÍâ¼¯³É°ïÖúÀà£¬Ö÷¶¯µ÷ÓÃ
+Student::~Student() {
+    cout << "Îö¹¹º¯ÊıÖ´ĞĞ" << endl;
+    //ÊÍ·Å ¶ÑÇø¿ª±ÙµÃ³ÉÔ±   -> NULL ±ÜÃâĞü¿ÕÖ¸Õë
+}
+
+
+// ¸²¸Ç¿½±´º¯Êı
+Student::Student(const Student &student) {//³£Á¿ÒıÓÃ£ºÖ»¶Á£¬²»ÔÊĞíĞŞ¸Ä
+    cout << " ¿½±´¹¹Ôìº¯Êı " << endl;
+    this->name = student.name;
+    this->age = student.age;
+
 }

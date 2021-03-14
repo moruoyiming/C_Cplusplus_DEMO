@@ -5,21 +5,27 @@ using namespace std;
 
 
 /**
- * æž„é€ å‡½æ•°è¯¦è§£
+ * ¹¹Ôìº¯ÊýÏê½â
  * @return
  */
-int main() {
+int main32() {
 
-    //å †åŒºå¼€è¾Ÿç©ºé—´
-    Student * student = new Student();
-    Student * student2 = new Student("æœ‰å‚æ•°æž„é€ å‡½æ•°");
+    //¶ÑÇø¿ª±Ù¿Õ¼ä
+    Student *student = new Student();
+    Student *student2 = new Student("ÓÐ²ÎÊý¹¹Ôìº¯Êý");
     student->setAge(232);
     student->getAge();
-    cout << "student age:"<< student->getAge()  << endl;
+    cout << "student age:" << student->getAge() << endl;
     student2->getName();
-    cout << "student2 name:"<<  student2->getName()  << endl;
-    //æ ˆåŒºå¼€è¾Ÿç©ºé—´
-    Student student3;
+    cout << "student2 name:" << student2->getName() << endl;
+    //Õ»Çø¿ª±Ù¿Õ¼ä
+    Student *student3 = new Student("ÓÐ²ÎÊý¹¹Ôìº¯Êý", 23);
+    cout << "name:" << student3->getName() << ",age:" << student3->getAge() << endl;
+    delete student3;//Îö¹¹º¯ÊýÖ´ÐÐ
+    delete student2;
+    delete student;
+//    free(student3)  new ¶ÔÏó´Ë·½Ê½²»¹æ·¶
+//  malloc ¹¹Ôìº¯Êý²»Ö´ÐÐ
     return 0;
 };
 

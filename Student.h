@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std;
-//Student.h  å¤´æ–‡ä»¶ åªå†™å£°æ˜ ä¸å†™å®ç°
+//Student.h  Í·ÎÄ¼ş Ö»Ğ´ÉùÃ÷ ²»Ğ´ÊµÏÖ
 
 class Student {
 private:
@@ -10,10 +10,12 @@ private:
 
 public:
 
-    //æ— å‚æ„é€ å‡½æ•°
+    //ÎŞ²Î¹¹Ôìº¯Êı
     Student();
 
-    Student(char * name);
+    Student(char *name);
+
+    Student(char *name, int age);
 
     void setAge(int age);
 
@@ -22,4 +24,9 @@ public:
     char *getName();
 
     int getAge();
+
+    ~Student();
+
+    // ¸²¸Ç¿½±´º¯Êı
+    Student(const Student &student) ;
 };
