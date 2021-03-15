@@ -8,7 +8,7 @@ using namespace std;
  * 深拷贝  浅拷贝
  * @return
  */
-int main() {
+int main35() {
 
     // 1.情况分析 栈上分配内存，弹栈
     Person man;

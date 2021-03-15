@@ -1,5 +1,5 @@
 //
-// Created by è…ç‘éœ– on 2021/3/15.
+// Created by İÑÈğÁØ on 2021/3/15.
 //
 
 #ifndef NDK_DEMO_PERSON_H
@@ -21,6 +21,6 @@ public:
 
     ~Person();
 
-    //é»˜è®¤åŒ…å«ä¸€ä¸ªæ‹·è´æ„é€ å‡½æ•° éšå¼
+    //Ä¬ÈÏ°üº¬Ò»¸ö¿½±´¹¹Ôìº¯Êı ÒşÊ½
     Person(const Person &person);
 };
