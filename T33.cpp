@@ -20,7 +20,6 @@ int main(){
     //对象  对象一 = 对象二， 默认拷贝构造函数;
 
     // 覆盖拷贝函数
-
     Student stu1("ligui",123);
     Student stu2 = stu1;
     cout << "student2 name = " << stu2.getName() <<"   age =  "<<stu2.getAge()<< endl;
