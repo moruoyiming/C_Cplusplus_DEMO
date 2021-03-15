@@ -8,7 +8,7 @@ using namespace std;
  * 指针常量 常量指针 常量指针常量
  * @return
  */
-int main() {
+int main34() {
 //    const * char  常量指针
 //    strcpy()
 
