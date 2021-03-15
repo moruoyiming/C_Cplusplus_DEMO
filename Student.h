@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std;
-//Student.h  Í·ÎÄ¼þ Ö»Ð´ÉùÃ÷ ²»Ð´ÊµÏÖ
+//Student.h  Í·ï¿½Ä¼ï¿½ Ö»Ð´ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ð´Êµï¿½ï¿½
 
 class Student {
 private:
@@ -10,7 +10,7 @@ private:
 
 public:
 
-    //ÎÞ²Î¹¹Ôìº¯Êý
+    //ï¿½Þ²Î¹ï¿½ï¿½ìº¯ï¿½ï¿½
     Student();
 
     Student(char *name);
@@ -27,6 +27,6 @@ public:
 
     ~Student();
 
-    // ¸²¸Ç¿½±´º¯Êý
+    // ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     Student(const Student &student) ;
 };
