@@ -29,10 +29,12 @@ Person::~Person() {
 
 Person::Person(const Person &person) {
     cout << "拷贝构造函数执行 person=" << &person << "   this =  " << this << endl;
-//  浅拷贝
+//  【浅拷贝】 新地址name，旧地址name指向同一个空间，会造成重复free的问题，引发崩溃
     this->name = person.name;
     this->age = person.age;
 //    &person 旧地址  this->name为新地址
 //    &person 旧地址  this->age为新地址
-
+//  【深拷贝】 旧地址name，新地址name会重新指向一个内存空间。
+//    this->name = static_cast<char *>(malloc(sizeof(char *) * 10));
+//    strcpy(this->name,person.name);
 }
