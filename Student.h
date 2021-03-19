@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std;
-//Student.h  ͷ�ļ� ֻд���� ��дʵ��
+//Student.h  头文件 只写声明 不写实现
 
 class Student {
 private:
@@ -10,7 +10,7 @@ private:
 
 public:
 
-    //�޲ι��캯��
+    //无参构造函数
     Student();
 
     Student(char *name);
@@ -27,6 +27,6 @@ public:
 
     ~Student();
 
-    // ���ǿ�������
+    // 构造函数拷贝
     Student(const Student &student) ;
 };

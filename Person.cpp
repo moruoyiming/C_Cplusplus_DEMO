@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS // strcpyè¿è¡Œä¼šæŠ¥é”™
+#define _CRT_SECURE_NO_WARNINGS // strcpyÔËĞĞ»á±¨´í
 
 #include "Person.h"
 #include <iostream>
@@ -7,31 +7,34 @@
 using namespace std;
 
 Person::Person() {
-    cout << "ç©ºå‚æ•°æ„é€ å‡½æ•°" << endl;
+    cout << "¿Õ²ÎÊı¹¹Ôìº¯Êı" << endl;
 }
 
 Person::Person(char *name) : Person(name, age) {
-    cout << "ä¸€ä¸ªå‚æ•°æ„é€ å‡½æ•°" << endl;
+    cout << "Ò»¸ö²ÎÊı¹¹Ôìº¯Êı this : " << this << endl;
 }
 
 Person::Person(char *name, int age) {
-    cout << "äºŒä¸ªå‚æ•°æ„é€ å‡½æ•°" << endl;
+    cout << "¶ş¸ö²ÎÊı¹¹Ôìº¯Êı this : " << this << endl;
     this->name = static_cast<char *>(malloc(sizeof(char *) * 10));
     strcpy(this->name, name);
     this->age = age;
 }
 
 Person::~Person() {
-    cout << "ææ„å‡½æ•°æ‰§è¡Œ" << endl;
+    cout << "Îö¹¹º¯ÊıÖ´ĞĞ this : " << this << endl;
     free(this->name);
     this->name = NULL;
 }
 
 Person::Person(const Person &person) {
-    cout << "æ‹·è´æ„é€ å‡½æ•°æ‰§è¡Œ person=" << &person << endl;
+    cout << "¿½±´¹¹Ôìº¯ÊıÖ´ĞĞ person=" << &person << "   this =  " << this << endl;
+//  ¡¾Ç³¿½±´¡¿ ĞÂµØÖ·name£¬¾ÉµØÖ·nameÖ¸ÏòÍ¬Ò»¸ö¿Õ¼ä£¬»áÔì³ÉÖØ¸´freeµÄÎÊÌâ£¬Òı·¢±ÀÀ£
     this->name = person.name;
     this->age = person.age;
-//    this->name æ—§åœ°å€  &personä¸ºæ–°åœ°å€
-//    this->age æ—§åœ°å€  &personä¸ºæ–°åœ°å€
-
+//    &person ¾ÉµØÖ·  this->nameÎªĞÂµØÖ·
+//    &person ¾ÉµØÖ·  this->ageÎªĞÂµØÖ·
+//  ¡¾Éî¿½±´¡¿ ¾ÉµØÖ·name£¬ĞÂµØÖ·name»áÖØĞÂÖ¸ÏòÒ»¸öÄÚ´æ¿Õ¼ä¡£
+//    this->name = static_cast<char *>(malloc(sizeof(char *) * 10));
+//    strcpy(this->name,person.name);
 }
