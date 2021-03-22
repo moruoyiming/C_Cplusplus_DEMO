@@ -13,7 +13,7 @@ Person getPerson(char *name) {
 }
 
 
-int main() {
+int main36() {
 //    二个参数构造函数 this : 0x65feb8
 //    一个参数构造函数 this : 0x65feb8
 //    getPerson函数：0x65feb8
