@@ -1,8 +1,41 @@
 #include <iostream>
-#include <stdarg.h>
+
 using namespace std;
-//  普通函数，静态函数，构造函数，析构函数，拷贝构造函数，友元函数
-int main() {
+
+class ImageView {
+private:
+    int viewSize;
+
+//    ==============引出友元类================
+    friend class Class;
+};
+
+
+//Java每个类，都有一个Class，此Class可以操作 ImageView私有成员
+class Class {
+public:
+    ImageView imageView;
+
+    void changeViewSize(int size) {
+//'viewSize' is a private member of 'ImageView'
+        imageView.viewSize = size;
+    }
+
+
+    int getViewSize() {
+        return imageView.viewSize;
+    }
+
+};
+
+
+/**
+ * 友元类  【ImageView 私有成员 可以通过Class反射来访问，但是Class操作的是native C++代码】
+ * @return
+ */
+int main42() {
+    Class mImageViewClass;
+    mImageViewClass.changeViewSize(23232);
+    cout << "viewsize = " << mImageViewClass.getViewSize() << endl;
     return 0;
 }
-
