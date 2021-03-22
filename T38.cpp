@@ -2,7 +2,7 @@
 
 using namespace std;
 
-class Dog {
+class Dog1 {
 public:
     char *name;
     int age;
@@ -27,7 +27,7 @@ public:
 };
 
 //2.再实现
-int Dog::id = 9;
+int Dog1::id = 9;
 
 /**
  * static 静态关键字
@@ -37,10 +37,10 @@ int Dog::id = 9;
  * @return
  */
 int main38() {
-    Dog dog;
-    cout << " number = " << Dog::id << endl;
-    Dog::update();//类名::调用静态函数
-    cout << " number = " << Dog::id << endl;
+    Dog1 dog;
+    cout << " number = " << Dog1::id << endl;
+    Dog1::update();//类名::调用静态函数
+    cout << " number = " << Dog1::id << endl;
     return 0;
 }
 

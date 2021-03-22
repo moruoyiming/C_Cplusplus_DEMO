@@ -46,7 +46,7 @@ public:
  * const 修饰
  * @return
  */
-int main() {
+int main40() {
 
     cout << "dsfasdf" << endl;
     return 0;
