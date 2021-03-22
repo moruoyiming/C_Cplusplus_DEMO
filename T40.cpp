@@ -19,7 +19,8 @@ public:
     /**
      * 原理 为什么可以修改age
      * 默认持有隐式this(Worker * const this 指针常量)
-     * const int * (指针常量代表指针地址不能修改，但是指针地址的值可以修改)
+     * int * const 指针常量【地址不能修改，地址对应的值能修改】
+     * const int * 常量指针【地址能修改，地址对应的值不能修改】
      */
     void change(){
         this->age=78;
