@@ -4,7 +4,7 @@
 
 using namespace std;
 
-class ArrayList {
+class ArrayClass {
 private:
     int size = 0;
     int *arrayValue;
@@ -26,17 +26,22 @@ public:
 };
 
 //输出容器的内容
-void printfArrayClass(ArrayList arrayList) {
+void printfArrayClass(ArrayClass arrayList) {
+    cout << "printf value "<<endl;
     for (int i = 0; i < arrayList.getSize(); ++i) {
-
+        cout << "printf value " << arrayList[i] <<endl;
     }
 }
 
-int main() {
-
-    ArrayList arrayList;
-    arrayList.set(1, 123);
-
-
+int main45() {
+    cout << "printf value start"<<endl;
+    ArrayClass arrayList;
+    arrayList.set(0, 1000);
+    arrayList.set(1, 6000);
+    arrayList.set(2, 2000);
+    arrayList.set(3, 3000);
+    arrayList.set(4, 4000);
+    cout << "printf value end"<<endl;
+    printfArrayClass(arrayList);
     return 0;
 }
