@@ -71,7 +71,7 @@ public:
 
 };
 
-int main() {
+int main47() {
     MainActivity mainActivity;
     mainActivity.onCreate();
     mainActivity.onStart();
