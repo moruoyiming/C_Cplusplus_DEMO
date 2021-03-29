@@ -17,7 +17,7 @@ void addAction(T n1, T n2) {
     cout << "addAction(T n1, T n2)：" << n1 + n2 << endl;
 }
 
-int main() {
+int main54() {
     addAction(1, 2);
     addAction(23.2f, 23.12f);
     addAction(23, 123);
