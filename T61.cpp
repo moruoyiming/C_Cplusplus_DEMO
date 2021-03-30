@@ -30,7 +30,7 @@ struct doCompareAction2 {
     }
 };
 
-int main() {
+int main61() {
 //    set<Mat> setVar;
 //    set<Mat,less<Mat>> setVar;
     set<Mat, doCompareAction2> setVar;
