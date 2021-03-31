@@ -7,9 +7,9 @@ using namespace std;
 //2.multimap容器学习。
 //3.C++内部源码的仿函数。
 //4.多元谓词仿函数回顾操练。
-int main() {
+int main62() {
     cout << "1.map容器学习" << endl;
-    //注意：map会对key进行排序
+    //注意：map会对key进行排序 默认key不能重复
     map<int, string> mapVar;
     //添加数据
     //第一种方式
@@ -43,6 +43,11 @@ int main() {
 
     // 删除 、查找、操作
     map<int, string>::iterator findResult = mapVar.find(3);
+    if (findResult != mapVar.end()) {
+        cout << "find item key=" << findResult->first << " , value=" << findResult->second.c_str() << endl;
+    } else {
+        cout << "no find item " << endl;
+    }
 
     return 0;
 }
