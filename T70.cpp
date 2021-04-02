@@ -22,7 +22,7 @@ struct plus_d {
 
 
 //手写预定义函数
-int main() {
+int main70() {
 
     plus_d<int> add_func;
     int r = add_func(1, 3);
