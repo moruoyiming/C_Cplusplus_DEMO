@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int main() {
+int main80() {
     vector<int> vectorVar1;
     vectorVar1.push_back(100);
     vectorVar1.push_back(200);
