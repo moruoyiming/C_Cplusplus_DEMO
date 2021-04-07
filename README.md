@@ -73,4 +73,10 @@ NDK 开发学习笔记
 - [random_shuffle使用](T78.cpp)
 - [copy使用](T79.cpp)
 - [replace使用](T80.cpp)
+- [引用进阶](T81.cpp)
+- [thread线程](T82.cpp)
+- [Pthreads线程](T83.cpp)
+- [C++互斥锁](T85.cpp)
+- [C++条件变量+互斥锁](T85.cpp)
+
 
