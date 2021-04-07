@@ -76,6 +76,7 @@ NDK 开发学习笔记
 - [引用进阶](T81.cpp)
 - [thread线程](T82.cpp)
 - [Pthreads线程](T83.cpp)
+- [Pthreads线程 三种情况分析](T84.cpp)
 - [C++互斥锁](T85.cpp)
 - [C++条件变量+互斥锁](T85.cpp)
 
