@@ -23,7 +23,7 @@ void *runTask(void *pVoid) {
     return 0;
 }
 
-int main() {
+int main84() {
     int number = 999;
     //第一版
     pthread_t pthreadID;
