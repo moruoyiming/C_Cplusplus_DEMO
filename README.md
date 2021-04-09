@@ -79,5 +79,15 @@ NDK 开发学习笔记
 - [Pthreads线程 三种情况分析](T84.cpp)
 - [C++互斥锁](T85.cpp)
 - [C++条件变量+互斥锁](T85.cpp)
-
-
+- [智能指针原理](T87.cpp)
+- [shared_ptr使用](T88.cpp)
+- [weak_ptr使用](T89.cpp)
+- [unique_ptr使用](T90.cpp)
+- [自定义智能指针1](T91.cpp)
+- [自定义智能指针2](T92.cpp)
+- [四大类型转换const_cast使用](T93.cpp)
+- [四大类型转换static_cast使用](T94.cpp)
+- [四大类型转换dynamic_cast使用](T95.cpp)
+- [四大类型转换reinterpret_cast使用](T96.cpp)
+- [nullptr使用](T97.cpp)
+  

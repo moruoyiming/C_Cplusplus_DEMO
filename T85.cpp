@@ -9,10 +9,10 @@ using namespace std;
 
 queue<int> queueData;//定义一个全局的队列 用于存储/获取
 
-pthread_mutex_t mutex;//定义一个互斥锁，注意：此互斥锁，不能有野指针
+pthread_mutex_t mutesx;//定义一个互斥锁，注意：此互斥锁，不能有野指针
 
 void *task(void *pVoid) {
-    pthread_mutex_lock(&mutex);//锁住
+    pthread_mutex_lock(&mutesx);//锁住
     //此区域内 代码安全
     cout << "异步线程-当前线程的 ID=" << *static_cast<int *>(pVoid) << endl;
     if (!queueData.empty()) {
@@ -22,13 +22,13 @@ void *task(void *pVoid) {
         printf("异步线程-队列中没有数据\n");
     }
     sleep(1);
-    pthread_mutex_unlock(&mutex);//解锁
+    pthread_mutex_unlock(&mutesx);//解锁
     return 0;
 }
 
 int main85() {
     //初始化 互斥锁
-    pthread_mutex_init(&mutex, NULL);
+    pthread_mutex_init(&mutesx, NULL);
     //给队列手动增加数据
     for (int i = 10001; i < 10026; ++i) {
         queueData.push(i);
@@ -41,6 +41,6 @@ int main85() {
     }
     sleep(10);
     //销毁 互斥锁
-    pthread_mutex_destroy(&mutex);
+    pthread_mutex_destroy(&mutesx);
     return 0;
 }

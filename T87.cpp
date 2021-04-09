@@ -17,6 +17,8 @@ public:
 int main87(){
     Fish *fish =  new Fish();//堆区开辟
 //    delete fish;
+//  最后忘记delete fish
+//  如果加入到只能指针，就不用管理了
 //  智能指针帮助释放堆区开辟的内存
     shared_ptr<Fish> sharedPtr(fish);//栈区开辟sharedPtr +1 引用计数
     return 0;
