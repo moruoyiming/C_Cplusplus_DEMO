@@ -12,7 +12,7 @@ void show(int i) {
     cout << "show(int i)" << endl;
 }
 
-int main() {
+int main97() {
 
     show(9);
     show(nullptr);//C++11后的特性，原本本意代替NULL，除了贴袋NULL，还有此功能，定位到指针。
