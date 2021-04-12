@@ -14,7 +14,7 @@ public:
 
 };
 
-int main() {
+int main96() {
 //    reinterpret_cast<type>(expression)
     DerryPlayer *derryPlayer = new DerryPlayer();
 //    long  player = static_cast<long>(derryPlayer);
