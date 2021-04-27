@@ -24,11 +24,12 @@ using namespace std;
 #define CHEN(n1, n2) n1*n2;
 
 //复杂宏函数
-#define LOGIN(V) if(V==1){ \
-cout <<"满足"<<endl         \
-}else{                     \
-cout <<"满足"<<endl         \
-}//这个是结尾不用加\
+#define LOGIN(V)
+//if(V==1){
+//cout <<"满足"<<endl
+//}else{
+//cout <<"满足"<<endl
+//}//这个是结尾不用加\
 
 //宏函数
 // 优点
@@ -36,7 +37,7 @@ cout <<"满足"<<endl         \
 // 缺点
 //1. 会导致代码体积增大
 
-int main() {
+int main98() {
 
 
 //#if 1
