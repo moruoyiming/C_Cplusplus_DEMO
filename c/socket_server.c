@@ -9,7 +9,7 @@
 
 #define SERV_PORT 9527
 
-int main(void)
+int mainsockets(void)
 {
     int sfd, cfd;
     int len, i;
@@ -25,7 +25,7 @@ int main(void)
     bzero(&serv_addr, sizeof(serv_addr));           //将整个结构体清零
     serv_addr.sin_family = AF_INET;                 //选择协议族为IPv4
     serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);  //监听本地所有IP地址
-    serv_addr.sin_port = htons(SERV_PORT);          //绑定端口号    
+    serv_addr.sin_port = htons(SERV_PORT);          //绑定端口号
 
     /*绑定服务器地址结构*/
     bind(sfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr));

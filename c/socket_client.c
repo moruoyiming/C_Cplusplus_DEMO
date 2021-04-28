@@ -7,7 +7,7 @@
 #define SERV_IP "127.0.0.1"
 #define SERV_PORT 9527
 
-int main(void)
+int mainsocketc(void)
 {
     int sfd, len;
     struct sockaddr_in serv_addr;
