@@ -4,7 +4,7 @@
 #include<unistd.h>
 
 
-int main() {
+int mainfork() {
     int i = 0;
     pid_t pid;
 

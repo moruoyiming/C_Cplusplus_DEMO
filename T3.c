@@ -10,7 +10,7 @@ int main3(void) {
     int i;
     time_t t;
     srand((unsigned) time(&t));
-    printf("Ten randome numbers from 0 to 90 \n");
+    printf("Ten random numbers from 0 to 90 \n");
     for (i = 0; i < 10; i++) {
         printf("%d\n", rand() % 100);
     }
