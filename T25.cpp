@@ -4,12 +4,12 @@
 using namespace std;
 
 /**
- * Ö¸ÕëÈ¡µØÖ·
+ * æŒ‡é’ˆå–åœ°å€
  * @param number1
  * @param number2
  */
 void numberChange(int *number1, int *number2) {
-    cout << "main n1 µØÖ·:" << &number1 << "n2µØÖ·:" << &number2 << endl;
+    cout << "main n1 åœ°å€:" << &number1 << "n2åœ°å€:" << &number2 << endl;
     int temp = 0;
     temp = *number1;
     *number1 = *number2;
@@ -17,9 +17,9 @@ void numberChange(int *number1, int *number2) {
 }
 
 void numberChange2(int &number1, int &number2) {
-    cout << "main n1 µØÖ·:" << &number1 << "n2µØÖ·:" << &number2 << endl;
-    //Èç¹û²»²ÉÓÃÒıÓÃ £¬main º¯Êı ºÍ ±¾º¯Êı ÄÚ´æµØÖ·²»Ò»Ñù
-    //Èç¹û²ÉÓÃÒıÓÃ£¬ÄÚ´æµØÖ·Ò»Ñù
+    cout << "main n1 åœ°å€:" << &number1 << "n2åœ°å€:" << &number2 << endl;
+    //å¦‚æœä¸é‡‡ç”¨å¼•ç”¨ ï¼Œmain å‡½æ•° å’Œ æœ¬å‡½æ•° å†…å­˜åœ°å€ä¸ä¸€æ ·
+    //å¦‚æœé‡‡ç”¨å¼•ç”¨ï¼Œå†…å­˜åœ°å€ä¸€æ ·
     int temp = 0;
     temp = number1;
     number1 = number2;
@@ -48,52 +48,52 @@ typedef struct {
 
 } Student;
 
-void insertStudent(Student student) { //³£Á¿ÒıÓÃ  const Student & student
-    strcpy(student.name, "Ä½Èİ¸´");
+void insertStudent(Student student) { //å¸¸é‡å¼•ç”¨  const Student & student
+    strcpy(student.name, "æ…•å®¹å¤");
 }
 
-//void insertStudent2(const Student & student) { //³£Á¿ÒıÓÃ  const Student & student
-//    strcpy(student.name,"Ä½Èİ¸´");
+//void insertStudent2(const Student & student) { //å¸¸é‡å¼•ç”¨  const Student & student
+//    strcpy(student.name,"æ…•å®¹å¤");
 //}
 
 int main25() {
-    printf("½µÁúÊ®°ËÕÆ\n");
-    //²Ù×÷·ûÖØÔØ
-    cout << "ÇÜÁú¹¦" << endl;
+    printf("é™é¾™åå…«æŒ\n");
+    //æ“ä½œç¬¦é‡è½½
+    cout << "æ“’é¾™åŠŸ" << endl;
 
-    // ³£Á¿
+    // å¸¸é‡
 
     int number1 = 10;
     int number2 = 20;
-    cout << "main n1 µØÖ·:" << &number1 << "n2µØÖ·:" << &number2 << endl;
+    cout << "main n1 åœ°å€:" << &number1 << "n2åœ°å€:" << &number2 << endl;
     numberChange(&number1, &number2);
-//    numberChange2(number1, number2);
+    //    numberChange2(number1, number2);
     cout << "n1:" << number1 << "n2:" << number2 << endl;
 
 
 
-    //ÒıÓÃ
+    //å¼•ç”¨
 
     int n1 = 999;
-    int n2 = n1;//Öµ´«µİ  ÒıÓÃµØÖ·²»Í¬
+    int n2 = n1;//å€¼ä¼ é€’  å¼•ç”¨åœ°å€ä¸åŒ
     cout << "n1:" << &n1 << " n2:" << &n2 << endl;
     int n3 = 999;
-    int &n4 = n3;//ÒıÓÃ±ä»¯ £¬ÒıÓÃµØÖ·ÏàÍ¬
+    int &n4 = n3;//å¼•ç”¨å˜åŒ– ï¼Œå¼•ç”¨åœ°å€ç›¸åŒ
     int &n6 = n3;
     cout << "n3:" << &n3 << " n4:" << &n4 << endl;
     n6 = 9527;
     cout << "n3:" << &n3 << " n4:" << &n4 << " n6:" << &n6 << endl;
 
 
-    //³£Á¿ÒıÓÃ
-//    ²åÈëÊı¾İ¿â StudentµÃĞÅÏ¢¸ø²åÈëÊı¾İ¿â
-    Student student = {"ÇÇ·å", 23};
+    //å¸¸é‡å¼•ç”¨
+    //    æ’å…¥æ•°æ®åº“ Studentå¾—ä¿¡æ¯ç»™æ’å…¥æ•°æ®åº“
+    Student student = {"ä¹”å³°", 23};
     insertStudent(student);
 
-    // ·Ç 0 ¼´ true
+    // é 0 å³ true
     bool isOk = 0;
 
-    //µ±·½·¨³öÏÖ¶à¸öÂú×ãÌõ¼şµÄº¯Êı¾Í»á²úÉú¶şÒåĞÔ
+    //å½“æ–¹æ³•å‡ºç°å¤šä¸ªæ»¡è¶³æ¡ä»¶çš„å‡½æ•°å°±ä¼šäº§ç”ŸäºŒä¹‰æ€§
     add(100, 222);
     add(100, 222, 333);
     return 0;

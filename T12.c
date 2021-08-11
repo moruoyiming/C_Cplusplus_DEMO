@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * ×Ö·û´®²éÕÒ Æ´½Ó °üº¬
+ * å­—ç¬¦ä¸²æŸ¥æ‰¾ æ‹¼æ¥ åŒ…å«
  * @return
  */
 int main12() {
@@ -11,18 +11,18 @@ int main12() {
     char *subtext = "W";
     char *temp = strstr(text, subtext);
     if (temp) {
-        printf("Æ¥Åäµ½×Ö·û´® %s\n", temp);
+        printf("åŒ¹é…åˆ°å­—ç¬¦ä¸² %s\n", temp);
     } else {
-        printf("Î´Æ¥Åäµ½×Ö·û´® ");
+        printf("æœªåŒ¹é…åˆ°å­—ç¬¦ä¸² ");
     }
     int pop = temp - text;
     printf("temp length %d ad is %p\n", strlen(temp),temp);
     printf("text length %d ad is %p\n",  strlen(text),text);
-    printf("Ö¸ÕëÎ»ÖÃ %d \n", pop);
+    printf("æŒ‡é’ˆä½ç½® %d \n", pop);
 
 
     char *list[25];
-    char *str1 = "==C++==", *str2 = "==¸Éµ½==", *str3 = "==JAVA==";
+    char *str1 = "==C++==", *str2 = "==å¹²åˆ°==", *str3 = "==JAVA==";
     strcpy(list, str1);
     strcat(list, str2);
     strcat(list, str3);
@@ -33,7 +33,7 @@ int main12() {
     int pop2 = A - B ;
     printf("temp length %d ad is %p\n", strlen(A),A);
     printf("text length %d ad is %p\n",  strlen(B),B);
-    printf("Ö¸ÕëÎ»ÖÃ %d \n", pop2);
+    printf("æŒ‡é’ˆä½ç½® %d \n", pop2);
 
     return 0;
 }
